@@ -1,3 +1,5 @@
+--Define a maintenance task to drop partitions older than 12 months and create new partitions for the next month.
+-- Procedure to manage monthly partition maintenance
 CREATE OR REPLACE PROCEDURE manage_partitions()
 LANGUAGE plpgsql
 AS $$
