@@ -1,3 +1,4 @@
+--Create table sales_data
 CREATE TABLE sales_data (
     sale_id INTEGER,
     product_id INTEGER,
@@ -8,6 +9,7 @@ CREATE TABLE sales_data (
 	PRIMARY KEY (sale_id, sale_date)
 ) PARTITION BY RANGE (sale_date);
 
+--Create partitions for the past 12 months.
 CREATE TABLE sales_data_2023_05 PARTITION OF sales_data
     FOR VALUES FROM ('2023-05-01') TO ('2023-06-01');
 	
