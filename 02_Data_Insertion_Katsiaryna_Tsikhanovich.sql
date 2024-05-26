@@ -1,3 +1,4 @@
+--Write a script to generate and insert synthetic data into sales_data. 
 CREATE OR REPLACE FUNCTION generate_insert_data()
 RETURNS void
 LANGUAGE plpgsql
